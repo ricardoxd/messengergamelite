@@ -21,6 +21,23 @@ No soportado
 </audio>
 </li>
 </ul>
+ 
+
+<button onclick="reproducirSecuencia()">Reproducir secuencia</button>
+
+<script>
+function reproducirSecuencia() {
+  var audios = document.getElementsByTagName('audio');
+  for(let audio in audios){
+    audios[audio].play(); // Reproducir audio1
+    audios[audio].addEventListener("ended", function() {
+      if (audio+1){
+        audios[audio+1].play(); // Reproducir audio2 después de que audio1 termine
+      }
+    });
+  }
   
+}
+</script>
 </body>
 </html>
