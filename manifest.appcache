@@ -1,10 +1,8 @@
-    CACHE MANIFEST
-    version: 1
-    # Your application cache
-    CACHE:
-    index.html
-    ruta/al/archivo/de/audio.mp3
-    css/styles.css
-    js/script.js
-    NETWORK:
-    *
+CACHE MANIFEST
+version: 1
+# Your application cache
+CACHE:
+index.html
+eresgradiosa.mp3
+NETWORK:
+*
