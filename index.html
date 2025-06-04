@@ -1,55 +1,175 @@
-</html>
+<!DOCTYPE html>
+<html>
+
 <head>
-  <title>
-    Messenger
-  </title>
+<meta charset="UTF-8">
+<title>Musica Oweb.app </title>
+<link rel="stylesheet" type="text/css" href="/css/reset.css">	
+<link rel="stylesheet" href="/js/jAlert-master/src/jAlert.css" />
+<link rel="stylesheet" type="text/css" href="/css/estilo.php">	
+
+
+
+
+
+
+
+		<meta name="keywords" content="diseño" >
+		<meta name="description" content="Auto Diseñador" >
+		<meta name="author" content="RicardoXD" >
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" id="viewport"  >	
+
+<!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/js/nicedit/nicEdit.js"></script>
+<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/jq-2.2.0,dt-1.10.11/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/t/dt/jq-2.2.0,dt-1.10.11/datatables.min.js"></script>-->
+<link rel="stylesheet" type="text/css" href="/css/jquery.dataTables.min.css"/>
+<script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/js/eventos.js"></script>
+
+<!--<script src="/js/jAlert-master/src/jAlert-v3.js"></script>
+<script src="/js/jAlert-master/src/jAlert-functions.js"> </script>
+-->
+
+
+<script type="text/javascript">
+function css_responsive(r) {
+removejscssfile("/css/estilo.php", "css"); //remove all occurences "somestyle.css" on page
+
+            	 		var fileref=document.createElement("link");
+					    fileref.setAttribute("rel", "stylesheet");
+					    fileref.setAttribute("type", "text/css");
+					    
+
+			switch(r.value) {
+	
+
+								case '0':
+																       document.body.style.minWidth='1280px';
+								       document.getElementById("viewport").setAttribute("content", "width=1280; initial-scale=1");
+								       								       								       fileref.setAttribute("href", "css/estilo.php?id=0&"+Math.random());
+											    document.getElementsByTagName("head")[0].appendChild(fileref);
+											    console.log('cargo guargar html');
+
+								        break;
+								case '1':
+																       document.body.style.minWidth='481px';
+								       document.getElementById("viewport").setAttribute("content", "width=481; initial-scale=1");
+								       								       								       document.body.style.maxWidth='1024px';
+								       document.getElementById("viewport").setAttribute("content", "width=1024; initial-scale=1");
+								       								       fileref.setAttribute("href", "css/estilo.php?id=1&"+Math.random());
+											    document.getElementsByTagName("head")[0].appendChild(fileref);
+											    console.log('cargo guargar html');
+
+								        break;
+								case '2':
+																       document.body.style.minWidth='320px';
+								       document.getElementById("viewport").setAttribute("content", "width=320; initial-scale=1");
+								       								       								       document.body.style.maxWidth='480px';
+								       document.getElementById("viewport").setAttribute("content", "width=480; initial-scale=1");
+								       								       fileref.setAttribute("href", "css/estilo.php?id=2&"+Math.random());
+											    document.getElementsByTagName("head")[0].appendChild(fileref);
+											    console.log('cargo guargar html');
+
+								        break;
+				} 
+
+ 
+cargarElemento(document.getElementById('nombre-objeto').value);
+
+}
+</script>
+
+
+<style>
+.skin0
+{
+position:absolute;
+border:1.5px solid black;
+background-color:menu;
+font-family:Verdana;
+line-height:20px;
+cursor:default;
+height:auto;
+}
+.menuitems
+{
+font-size: 12px;
+FONT-FAMILY:Verdana;
+padding-right:20px;
+}
+</style>
+
+
 </head>
-<body>
-<ul style="
-    width: 100%;
-">
-<li style="
-    text-align: center;
-">
-Eres gradiosa
-<audio controls style="
+<body id="body_1" style="min-height:100vh;width:100%;margin:0 auto;outline: 3px dotted rgb(0, 0, 0);" >
+
+
+	<header id="header_163"  class="prueba">
+		
+		Musica.oweb.app<br>
+	</header>
+	<section id="section_164" >
+		<br>
+	</section>
+	<div id="div_165" >
+		<br>
+	<div id="div_257" >
+		Música Romantica<br>
+	<li id="li_258" >
+		Eres Grandiosa 
+	<audio controls style="
     width: 100%;
 ">
 
   <source src="eresgradiosa.mp3" type="audio/mpeg">
 No soportado
 </audio>
-</li>
-  <li style="
-    text-align: center;
-">
-Amado padre
-<audio controls style="
+	</h1>
+	</li>
+
+<li id="li_259" >
+		Eres Grandiosa 
+	<audio controls style="
     width: 100%;
 ">
 
   <source src="amadopadre.mp3" type="audio/mpeg">
 No soportado
 </audio>
-</li>
-</ul>
- 
+	</h1>
+	</li>
 
-<button onclick="reproducirSecuencia()">Reproducir secuencia</button>
+	</div>
+	</div></body>
+<script type="text/javascript" src="/js/ajax.php?.js"></script>
+<script type="text/javascript" src="/js/nicedit/nicEdit.js"></script>
+<script type="text/javascript">
+	bkLib.onDomLoaded(function() { nicEditors.allTextAreas() });
 
-<script>
-function reproducirSecuencia() {
-  var audios = document.getElementsByTagName('audio');
-  for(let audio in audios){
-    audios[audio].play(); // Reproducir audio1
-    audios[audio].addEventListener("ended", function() {
-      if (audio+1){
-        audios[audio+1].play(); // Reproducir audio2 después de que audio1 termine
-      }
-    });
-  }
-  
-}
+    $(document).ready(function() {
+            if( $('table'))
+            var datatable = $('table').DataTable({
+              "language": {
+            "lengthMenu": "Mostrando _MENU_ items por pagina",
+            "zeroRecords": "No se encontro resultado - lo siento",
+            "info": "Mostrando _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay items disponibles",
+            "infoFiltered": "(fliltrado de _MAX_ total items)"
+        }
+            });
+
+           
+           
+        });
+
+    
 </script>
-</body>
-</html>
+
+</html> 
+
+
